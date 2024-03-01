@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="flex flex-col items-center justify-center gap-7">
+      <h1
+        class="bg-sky-500 text-sky-50 text-center py-3 font-bold text-3xl w-full"
+      >
+        Rock Paper Scissors : SHOOT
+      </h1>
+      <h3 class="font-black font-mono text-sky-800 pt-3">PLAYER'S MOVES</h3>
+      <div class="user flex flex-row gap-10">
+        <button
+          onclick="rock()"
+          class="rock-p border-4 border-sky-500 rounded-full px-10 py-9 text-sky-500"
+        >
+          <i class="fa-solid fa-hand-back-fist fa-3x"></i>
+        </button>
+        <button
+          onclick="paper()"
+          class="paper-p border-4 border-sky-500 rounded-full px-9 py-9 text-sky-500"
+        >
+          <i class="fa-solid fa-hand fa-3x"></i>
+        </button>
+        <button
+          onclick="scissors()"
+          class="scissor-p border-4 border-sky-500 rounded-full px-9 py-9 text-sky-500"
+        >
+          <i class="fa-solid fa-hand-scissors fa-rotate-90 fa-3x"></i>
+        </button>
+      </div>
+
+      <h3
+        class="font-black font-mono text-sky-800 border-t-2 border-sky-500 w-full text-center pt-12 mt-10"
+      >
+        COMPUTER'S MOVES
+      </h3>
+      <div class="computer flex flex-row gap-10">
+        <button
+          class="rock-c border-4 border-sky-500 rounded-full px-10 py-9 text-sky-500"
+        >
+          <i class="fa-solid fa-hand-back-fist fa-3x"></i>
+        </button>
+        <button
+          class="paper-c border-4 border-sky-500 rounded-full px-9 py-9 text-sky-500"
+        >
+          <i class="fa-solid fa-hand fa-3x"></i>
+        </button>
+        <button
+          class="scissor-c border-4 border-sky-500 rounded-full px-9 py-9 text-sky-500"
+        >
+          <i class="fa-solid fa-hand-scissors fa-rotate-90 fa-3x"></i>
+        </button>
+      </div>
+    </main>
+    <div class="scor flex flex-row gap-8 fixed top-2 left-5">
+      <h6
+        class="bg-green-600 font-extrabold text-white border-green-800 rounded-full border-2 px-5 py-2"
+      >
+        WIN: <span id="win"></span>
+      </h6>
+      <h6
+        class="bg-red-600 font-extrabold text-white border-red-800 rounded-full border-2 px-5 py-2"
+      >
+        LOSE: <span id="lose"></span>
+      </h6>
+      <h6
+        class="bg-yellow-500 font-extrabold text-white border-yellow-800 rounded-full border-2 px-5 py-2"
+      >
+        TIE: <span id="tie"></span>
+      </h6>
+    </div>
+    <button
+      onclick="reset()"
+      class="bg-sky-50 text-sky-500 text-base px-4 py-2 rounded-full fixed right-5 top-2.5"
+    >
+      Reset Score
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
